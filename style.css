@@ -1,0 +1,166 @@
+@font-face {
+  font-family: PopBold;
+  src: url("assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: Pop;
+  src: url("assets/fonts/Poppins-Regular.ttf");
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+main {
+  margin: 0;
+}
+
+body {
+  font-family: Pop;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Off-white);
+}
+
+main {
+  position: relative;
+  width: 600px;
+  max-width: 80%;
+  padding: 30px;
+  border-bottom-right-radius: 150px;
+  background-color: var(--White);
+}
+
+input {
+  width: 60px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 1.2em;
+  border: 2px solid var(--Light-grey);
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--Purple);
+}
+
+small {
+  color: var(--Light-red);
+  font-size: 0.6em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+}
+
+form .input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+
+form label {
+  color: var(--Smokey-grey);
+  font-size: 0.7em;
+  letter-spacing: 4px;
+}
+
+hr {
+  width: 100%;
+  border-top: 1px solid var(--Light-grey);
+}
+
+.submit-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--Purple);
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: var(--Off-black);
+}
+
+#output strong {
+  color: var(--Purple);
+}
+
+#output h1 {
+  font-size: 5rem;
+  font-family: PopBold;
+  font-weight: bolder;
+  height: fit-content;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: center;
+  }
+  main {
+    width: 70%;
+  }
+  form {
+    padding: rem;
+  }
+  .container {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  #output {
+    margin-top: 3rem;
+  }
+  #output h1 {
+    font-size: 3rem;
+  }
+  .submit-block {
+    position: relative;
+  }
+  #submit-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 390px) {
+  #output h1 {
+    font-size: 2rem;
+  }
+}
